@@ -13,6 +13,7 @@
 		225B8DE7212336E00066CED2 /* CheckedInternet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 225B8DE5212336E00066CED2 /* CheckedInternet.xcdatamodeld */; };
 		225B8DE9212336E10066CED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225B8DE8212336E10066CED2 /* Assets.xcassets */; };
 		225B8DEC212336E10066CED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225B8DEA212336E10066CED2 /* LaunchScreen.storyboard */; };
+		225B8DF4212337490066CED2 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B8DF3212337490066CED2 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		225B8DE8212336E10066CED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		225B8DEB212336E10066CED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		225B8DED212336E10066CED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225B8DF3212337490066CED2 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				225B8DDE212336E00066CED2 /* AppDelegate.swift */,
+				225B8DF3212337490066CED2 /* Reachability.swift */,
 				225B8DE0212336E00066CED2 /* ViewController.swift */,
 				225B8DE2212336E00066CED2 /* Main.storyboard */,
 				225B8DE8212336E10066CED2 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				225B8DE1212336E00066CED2 /* ViewController.swift in Sources */,
 				225B8DE7212336E00066CED2 /* CheckedInternet.xcdatamodeld in Sources */,
+				225B8DF4212337490066CED2 /* Reachability.swift in Sources */,
 				225B8DDF212336E00066CED2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
