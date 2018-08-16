@@ -1,32 +1,13 @@
-/*
-Copyright (c) 2014, Ashley Mills
-All rights reserved.
+//
+//  ViewController.swift
+//  CheckedInternet
+//
+//  Created by Do Hoang Viet on 8/14/18.
+//  Copyright © 2018 Do Hoang Viet. All rights reserved.
+//
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice, this
-list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright notice,
-this list of conditions and the following disclaimer in the documentation
-and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
-*/
-
-import SystemConfiguration
 import Foundation
+import SystemConfiguration
 
 public enum ReachabilityError: Error {
     case FailedToCreateWithAddress(sockaddr_in)
@@ -59,9 +40,12 @@ public class Reachability {
         case notReachable, reachableViaWiFi, reachableViaWWAN
         public var description: String {
             switch self {
-            case .reachableViaWWAN: return "Cellular"
-            case .reachableViaWiFi: return "WiFi"
-            case .notReachable: return "No Connection"
+            case .reachableViaWWAN:
+                return "Cellular"
+            case .reachableViaWiFi:
+                return "WiFi"
+            case .notReachable:
+                return "No Connection"
             }
         }
     }
@@ -70,9 +54,12 @@ public class Reachability {
         case none, wifi, cellular
         public var description: String {
             switch self {
-            case .cellular: return "Cellular"
-            case .wifi: return "WiFi"
-            case .none: return "No Connection"
+            case .cellular:
+                return "Cellular"
+            case .wifi:
+                return "WiFi"
+            case .none:
+                return "No Connection"
             }
         }
     }
@@ -141,7 +128,7 @@ public class Reachability {
     fileprivate var notifierRunning = false
     fileprivate let reachabilityRef: SCNetworkReachability
 
-    fileprivate let reachabilitySerialQueue = DispatchQueue(label: "uk.co.ashleymills.reachability")
+    fileprivate let reachabilitySerialQueue = DispatchQueue(label: "bczjhxbckjxzhckfk.asdgfgsdf")
 
     fileprivate var usingHostname = false
 
@@ -229,7 +216,7 @@ public extension Reachability {
         return isRunningOnDevice && isReachableFlagSet && isOnWWANFlagSet
     }
 
-    @available(*, deprecated: 4.0, message: "Please use `connection == .wifi`")
+    @available(*, deprecated: 4.1, message: "Please use `connection == .wifi`")
     var isReachableViaWiFi: Bool {
         // Check we're reachable
         guard isReachableFlagSet else { return false }
